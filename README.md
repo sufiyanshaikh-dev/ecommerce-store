@@ -13,7 +13,7 @@ Features product listings, shopping cart, checkout, and user authentication.
 ## Tech Stack
 - **Frontend:** React, Vite, Tailwind CSS
 - **Backend:** Node.js, Express
-- **Database:** (Add if you’re using one, e.g., MongoDB)
+- **Database:** MongoDB
 - **Deployment:** (Netlify / Vercel / Your choice)
 
 ## Installation
