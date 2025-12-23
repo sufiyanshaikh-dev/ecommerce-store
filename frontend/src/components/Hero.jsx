@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
             {/* Hero right side */}
             {/* Mobile image */}
-            <img src={assets.hero_img} alt="" className='w-[530px] h-48 block md:hidden' />
+            <img src={assets.hero_img} alt="" className='w-[600px] h-48 block md:hidden' />
 
             {/* Desktop image */}
             <img src={assets.hero_second_img} alt="" className='w-2/4 hidden md:block' />
