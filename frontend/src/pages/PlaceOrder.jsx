@@ -12,7 +12,7 @@ const getUserIdFromToken = (token) => {
   try {
     const payload = token.split('.')[1];
     const decoded = JSON.parse(atob(payload));
-    return decoded.id; // or decoded._id depending on your backend
+    return decoded.id;
   } catch (err) {
     console.error("Failed to decode token", err);
     return null;
@@ -42,33 +42,6 @@ const PlaceOrder = () => {
     const value = event.target.value
     setFormdata(data => ({ ...data, [name]: value }))
   };
-
-  // const initPay = async () => {
-  //   const options = {
-  //     key: import.meta.env.VITE_RAZORPAY_KEY_ID,
-  //     amount: order.amount,
-  //     currency: order.currency,
-  //     name: "Order Payment",
-  //     description: "Order Payment",
-  //     order_id: order.id,
-  //     receipt: order.receipt,
-  //     handler: async (response) => {
-  //       console.log(error);
-  //       try {
-  //         const { data } = await axios.post(backendUrl + "/api/order/verifyRazorpay", response, { headers: { Authorization: `Bearer ${token}` } })
-  //         if(data.success){
-  //           navigate("/orders");
-  //           setCartItems({})
-  //         }
-  //       } catch (error) {
-  //         console.log(error);
-  //         toast.error(error.message)
-  //       }
-  //     }
-  //   }
-  //   const rzp = new window.Razorpay(options);
-  //   rzp.open();
-  // }
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();

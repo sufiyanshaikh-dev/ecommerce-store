@@ -50,7 +50,7 @@ const ShopContextProvider = ({ children }) => {
       cartData[itemId][size] = (cartData[itemId][size] || 0) + 1;
       return cartData;
     });
-
+    
     toast.success("Added to cart!");
   };
 
@@ -95,7 +95,7 @@ const ShopContextProvider = ({ children }) => {
           totalAmount += itemInfo.price * quantity;
         }
       }
-    }
+    } 
     return totalAmount;
   };
 
@@ -135,7 +135,7 @@ const ShopContextProvider = ({ children }) => {
     const localToken = localStorage.getItem("token");
     if (localToken) {
       setToken(localToken);
-      getUserCart(localToken); // always use the fresh token from localStorage
+      getUserCart(localToken);
     }
   }, []);
 
